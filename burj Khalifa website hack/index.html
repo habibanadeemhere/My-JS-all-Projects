@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en-US" class="notranslate" translate="no">
+
+<head>
+    <meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+    <script>(() => { class RocketLazyLoadScripts { constructor() { this.v = "2.0.3", this.userEvents = ["keydown", "keyup", "mousedown", "mouseup", "mousemove", "mouseover", "mouseenter", "mouseout", "mouseleave", "touchmove", "touchstart", "touchend", "touchcancel", "wheel", "click", "dblclick", "input", "visibilitychange"], this.attributeEvents = ["onblur", "onclick", "oncontextmenu", "ondblclick", "onfocus", "onmousedown", "onmouseenter", "onmouseleave", "onmousemove", "onmouseout", "onmouseover", "onmouseup", "onmousewheel", "onscroll", "onsubmit"] } async t() { this.i(), this.o(), /iP(ad|hone)/.test(navigator.userAgent) && this.h(), this.u(), this.l(this), this.m(), this.k(this), this.p(this), this._(), await Promise.all([this.R(), this.L()]), this.lastBreath = Date.now(), this.S(this), this.P(), this.D(), this.O(), this.M(), await this.C(this.delayedScripts.normal), await this.C(this.delayedScripts.defer), await this.C(this.delayedScripts.async), this.F("domReady"), await this.T(), await this.j(), await this.I(), this.F("windowLoad"), await this.A(), window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this.lastTouchEnd && await new Promise((t => setTimeout(t, 500 - Date.now() + this.lastTouchEnd))), this.H(), this.F("all"), this.U(), this.W() } i() { this.CSPIssue = sessionStorage.getItem("rocketCSPIssue"), document.addEventListener("securitypolicyviolation", (t => { this.CSPIssue || "script-src-elem" !== t.violatedDirective || "data" !== t.blockedURI || (this.CSPIssue = !0, sessionStorage.setItem("rocketCSPIssue", !0)) }), { isRocket: !0 }) } o() { window.addEventListener("pageshow", (t => { this.persisted = t.persisted, this.realWindowLoadedFired = !0 }), { isRocket: !0 }), window.addEventListener("pagehide", (() => { this.onFirstUserAction = null }), { isRocket: !0 }) } h() { let t; function e(e) { t = e } window.addEventListener("touchstart", e, { isRocket: !0 }), window.addEventListener("touchend", (function i(o) { Math.abs(o.changedTouches[0].pageX - t.changedTouches[0].pageX) < 10 && Math.abs(o.changedTouches[0].pageY - t.changedTouches[0].pageY) < 10 && o.timeStamp - t.timeStamp < 200 && (o.target.dispatchEvent(new PointerEvent("click", { target: o.target, bubbles: !0, cancelable: !0, detail: 1 })), event.preventDefault(), window.removeEventListener("touchstart", e, { isRocket: !0 }), window.removeEventListener("touchend", i, { isRocket: !0 })) }), { isRocket: !0 }) } q(t) { this.userActionTriggered || ("mousemove" !== t.type || this.firstMousemoveIgnored ? "keyup" === t.type || "mouseover" === t.type || "mouseout" === t.type || (this.userActionTriggered = !0, this.onFirstUserAction && this.onFirstUserAction()) : this.firstMousemoveIgnored = !0), "click" === t.type && t.preventDefault(), this.savedUserEvents.length > 0 && (t.stopPropagation(), t.stopImmediatePropagation()), "touchstart" === this.lastEvent && "touchend" === t.type && (this.lastTouchEnd = Date.now()), "click" === t.type && (this.lastTouchEnd = 0), this.lastEvent = t.type, this.savedUserEvents.push(t) } u() { this.savedUserEvents = [], this.userEventHandler = this.q.bind(this), this.userEvents.forEach((t => window.addEventListener(t, this.userEventHandler, { passive: !1, isRocket: !0 }))) } U() { this.userEvents.forEach((t => window.removeEventListener(t, this.userEventHandler, { passive: !1, isRocket: !0 }))), this.savedUserEvents.forEach((t => { t.target.dispatchEvent(new window[t.constructor.name](t.type, t)) })) } m() { this.eventsMutationObserver = new MutationObserver((t => { const e = "return false"; for (const i of t) { if ("attributes" === i.type) { const t = i.target.getAttribute(i.attributeName); t && t !== e && (i.target.setAttribute("data-rocket-" + i.attributeName, t), i.target["rocket" + i.attributeName] = new Function("event", t), i.target.setAttribute(i.attributeName, e)) } "childList" === i.type && i.addedNodes.forEach((t => { if (t.nodeType === Node.ELEMENT_NODE) for (const i of t.attributes) this.attributeEvents.includes(i.name) && i.value && "" !== i.value && (t.setAttribute("data-rocket-" + i.name, i.value), t["rocket" + i.name] = new Function("event", i.value), t.setAttribute(i.name, e)) })) } })), this.eventsMutationObserver.observe(document, { subtree: !0, childList: !0, attributeFilter: this.attributeEvents }) } H() { this.eventsMutationObserver.disconnect(), this.attributeEvents.forEach((t => { document.querySelectorAll("[data-rocket-" + t + "]").forEach((e => { e.setAttribute(t, e.getAttribute("data-rocket-" + t)), e.removeAttribute("data-rocket-" + t) })) })) } k(t) { Object.defineProperty(HTMLElement.prototype, "onclick", { get() { return this.rocketonclick || null }, set(e) { this.rocketonclick = e, this.setAttribute(t.everythingLoaded ? "onclick" : "data-rocket-onclick", "this.rocketonclick(event)") } }) } S(t) { function e(e, i) { let o = e[i]; e[i] = null, Object.defineProperty(e, i, { get: () => o, set(s) { t.everythingLoaded ? o = s : e["rocket" + i] = o = s } }) } e(document, "onreadystatechange"), e(window, "onload"), e(window, "onpageshow"); try { Object.defineProperty(document, "readyState", { get: () => t.rocketReadyState, set(e) { t.rocketReadyState = e }, configurable: !0 }), document.readyState = "loading" } catch (t) { console.log("WPRocket DJE readyState conflict, bypassing") } } l(t) { this.originalAddEventListener = EventTarget.prototype.addEventListener, this.originalRemoveEventListener = EventTarget.prototype.removeEventListener, this.savedEventListeners = [], EventTarget.prototype.addEventListener = function (e, i, o) { o && o.isRocket || !t.B(e, this) && !t.userEvents.includes(e) || t.B(e, this) && !t.userActionTriggered || e.startsWith("rocket-") || t.everythingLoaded ? t.originalAddEventListener.call(this, e, i, o) : t.savedEventListeners.push({ target: this, remove: !1, type: e, func: i, options: o }) }, EventTarget.prototype.removeEventListener = function (e, i, o) { o && o.isRocket || !t.B(e, this) && !t.userEvents.includes(e) || t.B(e, this) && !t.userActionTriggered || e.startsWith("rocket-") || t.everythingLoaded ? t.originalRemoveEventListener.call(this, e, i, o) : t.savedEventListeners.push({ target: this, remove: !0, type: e, func: i, options: o }) } } F(t) { "all" === t && (EventTarget.prototype.addEventListener = this.originalAddEventListener, EventTarget.prototype.removeEventListener = this.originalRemoveEventListener), this.savedEventListeners = this.savedEventListeners.filter((e => { let i = e.type, o = e.target || window; return "domReady" === t && "DOMContentLoaded" !== i && "readystatechange" !== i || ("windowLoad" === t && "load" !== i && "readystatechange" !== i && "pageshow" !== i || (this.B(i, o) && (i = "rocket-" + i), e.remove ? o.removeEventListener(i, e.func, e.options) : o.addEventListener(i, e.func, e.options), !1)) })) } p(t) { let e; function i(e) { return t.everythingLoaded ? e : e.split(" ").map((t => "load" === t || t.startsWith("load.") ? "rocket-jquery-load" : t)).join(" ") } function o(o) { function s(e) { const s = o.fn[e]; o.fn[e] = o.fn.init.prototype[e] = function () { return this[0] === window && t.userActionTriggered && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { const e = arguments[0][t]; delete arguments[0][t], arguments[0][i(t)] = e }))), s.apply(this, arguments), this } } if (o && o.fn && !t.allJQueries.includes(o)) { const e = { DOMContentLoaded: [], "rocket-DOMContentLoaded": [] }; for (const t in e) document.addEventListener(t, (() => { e[t].forEach((t => t())) }), { isRocket: !0 }); o.fn.ready = o.fn.init.prototype.ready = function (i) { function s() { parseInt(o.fn.jquery) > 2 ? setTimeout((() => i.bind(document)(o))) : i.bind(document)(o) } return t.realDomReadyFired ? !t.userActionTriggered || t.fauxDomReadyFired ? s() : e["rocket-DOMContentLoaded"].push(s) : e.DOMContentLoaded.push(s), o([]) }, s("on"), s("one"), s("off"), t.allJQueries.push(o) } e = o } t.allJQueries = [], o(window.jQuery), Object.defineProperty(window, "jQuery", { get: () => e, set(t) { o(t) } }) } P() { const t = new Map; document.write = document.writeln = function (e) { const i = document.currentScript, o = document.createRange(), s = i.parentElement; let n = t.get(i); void 0 === n && (n = i.nextSibling, t.set(i, n)); const c = document.createDocumentFragment(); o.setStart(c, 0), c.appendChild(o.createContextualFragment(e)), s.insertBefore(c, n) } } async R() { return new Promise((t => { this.userActionTriggered ? t() : this.onFirstUserAction = t })) } async L() { return new Promise((t => { document.addEventListener("DOMContentLoaded", (() => { this.realDomReadyFired = !0, t() }), { isRocket: !0 }) })) } async I() { return this.realWindowLoadedFired ? Promise.resolve() : new Promise((t => { window.addEventListener("load", t, { isRocket: !0 }) })) } M() { this.pendingScripts = []; this.scriptsMutationObserver = new MutationObserver((t => { for (const e of t) e.addedNodes.forEach((t => { "SCRIPT" !== t.tagName || t.noModule || t.isWPRocket || this.pendingScripts.push({ script: t, promise: new Promise((e => { const i = () => { const i = this.pendingScripts.findIndex((e => e.script === t)); i >= 0 && this.pendingScripts.splice(i, 1), e() }; t.addEventListener("load", i, { isRocket: !0 }), t.addEventListener("error", i, { isRocket: !0 }), setTimeout(i, 1e3) })) }) })) })), this.scriptsMutationObserver.observe(document, { childList: !0, subtree: !0 }) } async j() { await this.J(), this.pendingScripts.length ? (await this.pendingScripts[0].promise, await this.j()) : this.scriptsMutationObserver.disconnect() } D() { this.delayedScripts = { normal: [], async: [], defer: [] }, document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t => { t.hasAttribute("data-rocket-src") ? t.hasAttribute("async") && !1 !== t.async ? this.delayedScripts.async.push(t) : t.hasAttribute("defer") && !1 !== t.defer || "module" === t.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(t) : this.delayedScripts.normal.push(t) : this.delayedScripts.normal.push(t) })) } async _() { await this.L(); let t = []; document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e => { let i = e.getAttribute("data-rocket-src"); if (i && !i.startsWith("data:")) { i.startsWith("//") && (i = location.protocol + i); try { const o = new URL(i).origin; o !== location.origin && t.push({ src: o, crossOrigin: e.crossOrigin || "module" === e.getAttribute("data-rocket-type") }) } catch (t) { } } })), t = [...new Map(t.map((t => [JSON.stringify(t), t]))).values()], this.N(t, "preconnect") } async $(t) { if (await this.G(), !0 !== t.noModule || !("noModule" in HTMLScriptElement.prototype)) return new Promise((e => { let i; function o() { (i || t).setAttribute("data-rocket-status", "executed"), e() } try { if (navigator.userAgent.includes("Firefox/") || "" === navigator.vendor || this.CSPIssue) i = document.createElement("script"), [...t.attributes].forEach((t => { let e = t.nodeName; "type" !== e && ("data-rocket-type" === e && (e = "type"), "data-rocket-src" === e && (e = "src"), i.setAttribute(e, t.nodeValue)) })), t.text && (i.text = t.text), t.nonce && (i.nonce = t.nonce), i.hasAttribute("src") ? (i.addEventListener("load", o, { isRocket: !0 }), i.addEventListener("error", (() => { i.setAttribute("data-rocket-status", "failed-network"), e() }), { isRocket: !0 }), setTimeout((() => { i.isConnected || e() }), 1)) : (i.text = t.text, o()), i.isWPRocket = !0, t.parentNode.replaceChild(i, t); else { const i = t.getAttribute("data-rocket-type"), s = t.getAttribute("data-rocket-src"); i ? (t.type = i, t.removeAttribute("data-rocket-type")) : t.removeAttribute("type"), t.addEventListener("load", o, { isRocket: !0 }), t.addEventListener("error", (i => { this.CSPIssue && i.target.src.startsWith("data:") ? (console.log("WPRocket: CSP fallback activated"), t.removeAttribute("src"), this.$(t).then(e)) : (t.setAttribute("data-rocket-status", "failed-network"), e()) }), { isRocket: !0 }), s ? (t.fetchPriority = "high", t.removeAttribute("data-rocket-src"), t.src = s) : t.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(t.text))) } } catch (i) { t.setAttribute("data-rocket-status", "failed-transform"), e() } })); t.setAttribute("data-rocket-status", "skipped") } async C(t) { const e = t.shift(); return e ? (e.isConnected && await this.$(e), this.C(t)) : Promise.resolve() } O() { this.N([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } N(t, e) { this.trash = this.trash || []; let i = !0; var o = document.createDocumentFragment(); t.forEach((t => { const s = t.getAttribute && t.getAttribute("data-rocket-src") || t.src; if (s && !s.startsWith("data:")) { const n = document.createElement("link"); n.href = s, n.rel = e, "preconnect" !== e && (n.as = "script", n.fetchPriority = i ? "high" : "low"), t.getAttribute && "module" === t.getAttribute("data-rocket-type") && (n.crossOrigin = !0), t.crossOrigin && (n.crossOrigin = t.crossOrigin), t.integrity && (n.integrity = t.integrity), t.nonce && (n.nonce = t.nonce), o.appendChild(n), this.trash.push(n), i = !1 } })), document.head.appendChild(o) } W() { this.trash.forEach((t => t.remove())) } async T() { try { document.readyState = "interactive" } catch (t) { } this.fauxDomReadyFired = !0; try { await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this.G(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")) } catch (t) { console.error(t) } } async A() { try { document.readyState = "complete" } catch (t) { } try { await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), window.dispatchEvent(new Event("rocket-load")), await this.G(), window.rocketonload && window.rocketonload(), await this.G(), this.allJQueries.forEach((t => t(window).trigger("rocket-jquery-load"))), await this.G(); const t = new Event("rocket-pageshow"); t.persisted = this.persisted, window.dispatchEvent(t), await this.G(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }) } catch (t) { console.error(t) } } async G() { Date.now() - this.lastBreath > 45 && (await this.J(), this.lastBreath = Date.now()) } async J() { return document.hidden ? new Promise((t => setTimeout(t))) : new Promise((t => requestAnimationFrame(t))) } B(t, e) { return e === document && "readystatechange" === t || (e === document && "DOMContentLoaded" === t || (e === window && "DOMContentLoaded" === t || (e === window && "load" === t || e === window && "pageshow" === t))) } static run() { (new RocketLazyLoadScripts).t() } } RocketLazyLoadScripts.run() })();</script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <style>
+        img:is([sizes="auto" i], [sizes^="auto," i]) {
+            contain-intrinsic-size: 3000px 1500px
+        }
+    </style>
+    <link rel="alternate" hreflang="ar-ae" href="https://www.burjkhalifa.ae/ar/" />
+    <link rel="alternate" hreflang="zh-ch" href="https://www.burjkhalifa.ae/zh-hans/" />
+    <link rel="alternate" hreflang="en-ae" href="https://www.burjkhalifa.ae/" />
+    <link rel="alternate" hreflang="ru-ru" href="https://www.burjkhalifa.ae/ru/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.burjkhalifa.ae/" />
+
+    <!-- This site is optimized with the Yoast SEO Premium plugin v22.3 (Yoast SEO v25.3) - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Burj Khalifa Official - Tickets, Tours, and Information Online</title>
+    <link crossorigin data-rocket-preconnect href="https://fonts.googleapis.com" rel="preconnect">
+    <link data-rocket-preload as="style"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans%3Awght%40300%3B400%3B500%3B600%3B700&#038;ver=1757072098&#038;family=Noto+Sans%3Aital%2Cwght%400%2C100..900%3B1%2C100..900&#038;ver=1757072098&#038;family=Noto+Sans+SC%3Awght%40100..900&#038;ver=1757072098&#038;family=Tajawal%3Awght%40200%3B300%3B400%3B500%3B700%3B800%3B900&#038;ver=1757072098&#038;display=swap"
+        rel="preload">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans%3Awght%40300%3B400%3B500%3B600%3B700&#038;ver=1757072098&#038;family=Noto+Sans%3Aital%2Cwght%400%2C100..900%3B1%2C100..900&#038;ver=1757072098&#038;family=Noto+Sans+SC%3Awght%40100..900&#038;ver=1757072098&#038;family=Tajawal%3Awght%40200%3B300%3B400%3B500%3B700%3B800%3B900&#038;ver=1757072098&#038;display=swap"
+        media="print" onload="this.media=&#039;all&#039;" rel="stylesheet">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans%3Awght%40300%3B400%3B500%3B600%3B700&#038;ver=1757072098&#038;family=Noto+Sans%3Aital%2Cwght%400%2C100..900%3B1%2C100..900&#038;ver=1757072098&#038;family=Noto+Sans+SC%3Awght%40100..900&#038;ver=1757072098&#038;family=Tajawal%3Awght%40200%3B300%3B400%3B500%3B700%3B800%3B900&#038;ver=1757072098&#038;display=swap">
+    </noscript>
+    <link rel="preload" data-rocket-preload as="image"
+        href="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/logo_cut.svg"
+        fetchpriority="high">
+    <meta name="description"
+        content="Discover the Burj Khalifa, Dubai&#039;s iconic skyscraper. Explore breathtaking views, dining experiences, and exclusive attractions in the world&#039;s tallest building." />
+    <link rel="canonical" href="https://www.burjkhalifa.ae/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:description"
+        content="Discover the Burj Khalifa, Dubai&#039;s iconic skyscraper. Explore breathtaking views, dining experiences, and exclusive attractions in the world&#039;s tallest building." />
+    <meta property="og:url" content="https://www.burjkhalifa.ae/" />
+    <meta property="og:site_name" content="Burj Khalifa" />
+    <meta property="article:modified_time" content="2024-09-24T10:50:41+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json"
+        class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.burjkhalifa.ae/","url":"https://www.burjkhalifa.ae/","name":"Burj Khalifa Official - Tickets, Tours, and Information Online","isPartOf":{"@id":"https://www.burjkhalifa.ae/#website"},"datePublished":"2023-07-21T06:28:16+00:00","dateModified":"2024-09-24T10:50:41+00:00","description":"Discover the Burj Khalifa, Dubai's iconic skyscraper. Explore breathtaking views, dining experiences, and exclusive attractions in the world's tallest building.","breadcrumb":{"@id":"https://www.burjkhalifa.ae/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.burjkhalifa.ae/"]}]},{"@type":"BreadcrumbList","@id":"https://www.burjkhalifa.ae/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.burjkhalifa.ae/#website","url":"https://www.burjkhalifa.ae/","name":"Burj Khalifa","description":"Your SUPER-powered WP Engine Site","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.burjkhalifa.ae/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+    <!-- / Yoast SEO Premium plugin. -->
+
+
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+    <style id='wp-emoji-styles-inline-css' type='text/css'>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <style id='classic-theme-styles-inline-css' type='text/css'>
+        /*! This file is auto-generated */
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border-radius: 9999px;
+            box-shadow: none;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em
+        }
+
+        .wp-block-file__button {
+            background: #32373c;
+            color: #fff;
+            text-decoration: none
+        }
+    </style>
+    <style id='global-styles-inline-css' type='text/css'>
+        :root {
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--aspect-ratio--9-16: 9/16;
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        :where(.is-layout-grid) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :root :where(.wp-block-pullquote) {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+
+
+
+
+    <link rel='stylesheet' id='bootstrap-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/bootstrap.min.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='owlCarouselCss-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/owl.carousel.min.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='AOS-css-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/aos.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='header-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/header.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='footer-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/footer.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='burj-khalifa-all-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/all.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='arabicLang-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/arabicLang.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='homepage-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/homepage.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='burj-khalifa-landing-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/css/bk-landing-animation.css?ver=1757072098'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient/css/font-awesome-legacy.min.css?ver=4.7.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='skin-material-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient/css/build/skin-material.css?ver=16.0.5'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='salient-child-style-css'
+        href='https://www.burjkhalifa.ae/wp-content/themes/salient-child/style.css?ver=16.0.5' type='text/css'
+        media='all' />
+    <script type="text/javascript" id="wpml-cookie-js-extra">
+        /* <![CDATA[ */
+        var wpml_cookies = { "wp-wpml_current_language": { "value": "en", "expires": 1, "path": "\/" } };
+        var wpml_cookies = { "wp-wpml_current_language": { "value": "en", "expires": 1, "path": "\/" } };
+        /* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=476000"
+        id="wpml-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript" id="emaar-enc-parameters-js-extra">
+        /* <![CDATA[ */
+        var EncParams = { "lc_cart_id": "onJOLJeHIzbbdOyJqJ60v2EjeqqrI7VNoDdIUZ2dZx+O2OQkHyRJ5IH0j8LQ5mnrbgDTn0ZD" };
+        /* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/plugins/emaar-custom/js/enc-params.js?ver=6.8.2"
+        id="emaar-enc-parameters-js"></script>
+    <script type="text/javascript" src="https://www.burjkhalifa.ae/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+        id="jquery-migrate-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/plugins/emaar-custom/js/emaar-custom-js.js?ver=6.8.2"
+        id="custom.js-js"></script>
+    <link rel="https://api.w.org/" href="https://www.burjkhalifa.ae/wp-json/" />
+    <link rel="alternate" title="JSON" type="application/json"
+        href="https://www.burjkhalifa.ae/wp-json/wp/v2/pages/11" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.burjkhalifa.ae/xmlrpc.php?rsd" />
+    <link rel='shortlink' href='https://www.burjkhalifa.ae/' />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+        href="https://www.burjkhalifa.ae/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.burjkhalifa.ae%2F" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+        href="https://www.burjkhalifa.ae/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.burjkhalifa.ae%2F&#038;format=xml" />
+    <meta name="generator" content="WPML ver:4.7.6 stt:5,59,1,45;" />
+    <link rel="icon" type="image/x-icon"
+        href="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/svg/bk_favicon.svg"
+        sizes="32x32">
+    <script type="rocketlazyloadscript"
+        data-rocket-type="text/javascript"> var root = document.getElementsByTagName( "html" )[0]; root.setAttribute( "class", "js" ); </script>
+    <link rel="icon" href="https://www.burjkhalifa.ae/wp-content/uploads/2023/08/FAV-ICON-BK.svg" sizes="32x32" />
+    <link rel="icon" href="https://www.burjkhalifa.ae/wp-content/uploads/2023/08/FAV-ICON-BK.svg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://www.burjkhalifa.ae/wp-content/uploads/2023/08/FAV-ICON-BK.svg" />
+    <meta name="msapplication-TileImage"
+        content="https://www.burjkhalifa.ae/wp-content/uploads/2023/08/FAV-ICON-BK.svg" />
+    <!-- Google Tag Manager -->
+
+    <script
+        type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-556SRRCS');</script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script data-cfasync="false" type="rocketlazyloadscript" data-rocket-type='text/javascript' id='vwoCode'>
+    window._vwo_code || (function() {
+    var account_id=930730,
+    version=2.1,
+    settings_tolerance=2000,
+    hide_element='body',
+    hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;',
+    /* DO NOT EDIT BELOW THIS LINE */
+    f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={nonce:v&&v.nonce,use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}v&&t.setAttribute('nonce',v.nonce);d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var n=this.getSettings(),i=d.createElement('script'),r=this;t=t||{};if(n){i.textContent=n;d.getElementsByTagName('head')[0].appendChild(i);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200||o.status===304){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var n=this.hide_element(),i=n?n+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=i;else t.appendChild(d.createTextNode(i));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var i=d.createElement('div');i.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;';i.setAttribute('id','_vis_opt_path_hides');i.classList.add('_vis_hide_layer');t.parentNode.insertBefore(i,t.nextSibling)}var o=window._vis_opt_url||d.URL,s='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(o)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:s})}else{this.load(s+'&x=true')}}};w._vwo_code=code;code.init();})();
+    </script>
+    <!-- End VWO Async SmartCode -->
+
+    <style id="wpforms-css-vars-root">
+        :root {
+            --wpforms-field-border-radius: 3px;
+            --wpforms-field-background-color: #ffffff;
+            --wpforms-field-border-color: rgba(0, 0, 0, 0.25);
+            --wpforms-field-text-color: rgba(0, 0, 0, 0.7);
+            --wpforms-label-color: rgba(0, 0, 0, 0.85);
+            --wpforms-label-sublabel-color: rgba(0, 0, 0, 0.55);
+            --wpforms-label-error-color: #d63637;
+            --wpforms-button-border-radius: 3px;
+            --wpforms-button-background-color: #066aab;
+            --wpforms-button-text-color: #ffffff;
+            --wpforms-field-size-input-height: 43px;
+            --wpforms-field-size-input-spacing: 15px;
+            --wpforms-field-size-font-size: 16px;
+            --wpforms-field-size-line-height: 19px;
+            --wpforms-field-size-padding-h: 14px;
+            --wpforms-field-size-checkbox-size: 16px;
+            --wpforms-field-size-sublabel-spacing: 5px;
+            --wpforms-field-size-icon-size: 1;
+            --wpforms-label-size-font-size: 16px;
+            --wpforms-label-size-line-height: 19px;
+            --wpforms-label-size-sublabel-font-size: 14px;
+            --wpforms-label-size-sublabel-line-height: 17px;
+            --wpforms-button-size-font-size: 17px;
+            --wpforms-button-size-height: 41px;
+            --wpforms-button-size-padding-h: 15px;
+            --wpforms-button-size-margin-top: 10px;
+
+        }
+    </style>
+    <style id="rocket-lazyrender-inline-css">
+        [data-wpr-lazyrender] {
+            content-visibility: auto;
+        }
+    </style>
+    <meta name="generator" content="WP Rocket 3.19.0.1"
+        data-wpr-features="wpr_delay_js wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_preload_links wpr_desktop" />
+</head>
+
+
+<body
+    class="home wp-singular page-template page-template-page page-template-page-php page page-id-11 wp-theme-salient wp-child-theme-salient-child  app-lang-en en material"
+    id="fullpage_height" style="overflow-y: scroll;">
+    <main class="mainwrapper mainWrapperBk">
+
+        <div class="sidenav-overlay">
+            <div class="collapsable-sidenav">
+                <div class="upper-portion">
+                    <ul id="menu-primary-menu" class="navbar-nav mobile-menu-static m-xl-auto m-lg-auto m-md-auto">
+                        <li class="nav-list"><a href="https://www.burjkhalifa.ae/the-tower/">The Tower</a>
+                            <ul class="megamenu">
+                                <li><a class="menu-heading" href="#">ABOUT BURJ KHALIFA</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/making/">Making</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/architecture-design/">Architecture
+                                                &amp; Design</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/structures/">Structures</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/awards/">Awards</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/the-tower/sustainability/">Sustainability</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">PORTFOLIO</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/gallery/">Gallery</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/the-great-towers/">Great
+                                                Towers of the World</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-list"><a href="https://www.burjkhalifa.ae/experiences/">Experiences</a>
+                            <ul class="megamenu">
+                                <li><a class="menu-heading" href="#">OBSERVATION DECKS</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/observation-decks/#the-lounge-burj-khalifa">The
+                                                Lounge, Burj Khalifa</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/observation-decks/#at-the-top-sky-burj-khalifa">At
+                                                The Top, SKY, Burj Khalifa</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/observation-decks/#at-the-top-burj-khalifa">At
+                                                The Top, Burj Khalifa</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">LUXURY STAYS</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/luxury-stays/#armani-hotel-dubai">Armani
+                                                Hotel, Dubai</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/luxury-stays/#armani-residences">Armani
+                                                Residences</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">EXPERIENCES NEARBY</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-fountain">Dubai
+                                                Fountain</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-opera">Dubai
+                                                Opera</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#sky-views">Sky
+                                                Views</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-mall">Dubai
+                                                Mall</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">FINE DINING</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/fine-dining/#at-mosphere">At.Mosphere</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/fine-dining/#armani-restaurants">Armani
+                                                Restaurants</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">WELLNESS</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/experiences/wellness/#armani-hotel-spa">Armani
+                                                Hotel / Spa</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-list"><a href="#">Projections</a>
+                            <ul class="megamenu">
+                                <li><a class="menu-heading" href="#">Projections</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/commercial-projections/">Commercial
+                                                Projections</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="change-language-cover dropdown">
+                    CHANGE LANGUAGE <figure class="action-btn dropbtn">
+                        <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/svg/language.svg"
+                            alt="language">
+                    </figure>
+                    <div class="dropdown-content">
+                        <h6>CHANGE LANGUAGE</h6>
+                        <a class="dropdown-item" href="https://www.burjkhalifa.ae">English</a>
+                        <a class="dropdown-item" href="https://www.burjkhalifa.ae/ar/">العربية</a>
+                        <a class="dropdown-item" href="https://www.burjkhalifa.ae/ru/">Русский</a>
+                        <a class="dropdown-item" href="https://www.burjkhalifa.ae/zh-hans/">简体中文</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <nav class="navbar navbar-expand-md navbar-default header">
+            <div class="navbar-content">
+                <a class="brand-logo navbar-brand p-0 m-0" href="https://www.burjkhalifa.ae">
+                    <img src="https://www.burjkhalifa.ae/wp-content/uploads/2024/08/BK-logo-en-02-cropped.svg"
+                        alt="Brand-logo" width="250" height="20" />
+                </a>
+                <div class="collapse navbar-collapse middle-navbar">
+                    <ul id="menu-primary-menu-1" class="navbar-nav navbar-for-desktop m-xl-auto m-lg-auto m-md-auto">
+                        <li class="nav-list"><a href="https://www.burjkhalifa.ae/the-tower/">The Tower</a>
+                            <ul class="megamenu">
+                                <li><a class="menu-heading" href="#">ABOUT BURJ KHALIFA</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/making/">Making</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/architecture-design/">Architecture
+                                                &amp; Design</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/structures/">Structures</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/awards/">Awards</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/the-tower/sustainability/">Sustainability</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">PORTFOLIO</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/gallery/">Gallery</a>
+                                        </li>
+                                        <li><a href="https://www.burjkhalifa.ae/the-tower/the-great-towers/">Great
+                                                Towers of the World</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-list"><a href="https://www.burjkhalifa.ae/experiences/">Experiences</a>
+                            <ul class="megamenu">
+                                <li><a class="menu-heading" href="#">OBSERVATION DECKS</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/observation-decks/#the-lounge-burj-khalifa">The
+                                                Lounge, Burj Khalifa</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/observation-decks/#at-the-top-sky-burj-khalifa">At
+                                                The Top, SKY, Burj Khalifa</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/observation-decks/#at-the-top-burj-khalifa">At
+                                                The Top, Burj Khalifa</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">LUXURY STAYS</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/luxury-stays/#armani-hotel-dubai">Armani
+                                                Hotel, Dubai</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/luxury-stays/#armani-residences">Armani
+                                                Residences</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">EXPERIENCES NEARBY</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-fountain">Dubai
+                                                Fountain</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-opera">Dubai
+                                                Opera</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#sky-views">Sky
+                                                Views</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-mall">Dubai
+                                                Mall</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">FINE DINING</a>
+                                    <ul>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/fine-dining/#at-mosphere">At.Mosphere</a>
+                                        </li>
+                                        <li><a
+                                                href="https://www.burjkhalifa.ae/experiences/fine-dining/#armani-restaurants">Armani
+                                                Restaurants</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a class="menu-heading" href="#">WELLNESS</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/experiences/wellness/#armani-hotel-spa">Armani
+                                                Hotel / Spa</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-list"><a href="#">Projections</a>
+                            <ul class="megamenu">
+                                <li><a class="menu-heading" href="#">Projections</a>
+                                    <ul>
+                                        <li><a href="https://www.burjkhalifa.ae/commercial-projections/">Commercial
+                                                Projections</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-action-col">
+
+                    <div class="action-group">
+                        <div class="dropdown">
+                            <figure class="action-btn dropbtn">
+                                <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/svg/language.svg"
+                                    alt="language" width="25" height="25">
+                            </figure>
+
+                            <div class="dropdown-content">
+                                <h6>CHANGE LANGUAGE</h6>
+                                <a class="dropdown-item" href="https://www.burjkhalifa.ae">English</a>
+                                <a class="dropdown-item" href="https://www.burjkhalifa.ae/ar/">العربية</a>
+                                <a class="dropdown-item" href="https://www.burjkhalifa.ae/ru/">Русский</a>
+                                <a class="dropdown-item" href="https://www.burjkhalifa.ae/zh-hans/">简体中文</a>
+                            </div>
+                        </div>
+
+                        <a href="https://ticket.atthetop.ae/" class="book-ticket" target='_blank'>
+                            Book Tickets </a>
+                        <a href="javascript:void(0)" id="menu-icon" class="action-btn hamburger-icon"
+                            id="hamburgerIcon">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="single-page-container">
+            <div class="logo_banner_animation">
+                <figure class="lg_bgcut"><img fetchpriority="high"
+                        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/logo_cut.svg"
+                        alt="Logo" width="267" height="150"></figure>
+                <figure class="logo_anim"><img
+                        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/loader.gif"
+                        alt="Loading animation for the Burj Khalifa website." width="164" height="164"></figure>
+            </div>
+
+            <div class="main_banner_topbar">
+                <h1 class="d-none">Burj Khalifa</h1>
+                <div class="trigger-wpsec">
+                    <div id="trigger1" class="spacer"></div>
+                </div>
+                <div class="ins_main_banner_topbar">
+                    <div class="top-banner-wrapper">
+                        <div class="banner-body text-center">
+                            <div class="banner-text my-4 video_head">
+                                <div class="hm_line_wrp">
+                                    <span class="line1">Discover a world where luxury</span><span class="line2">meets
+                                        the sky, and dreams take flight.</span><span class="line4">at</span>
+                                </div>
+                                <div class="mouse_line">
+                                    <a href="#" id="mousedown">
+                                        <div id="mouse_body">
+                                            <div id="mouse_wheel"></div>
+                                            <i class="arrow down"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hm_video_wrapper">
+                            <video class="lazyVideo video_screen"
+                                data-lazyvsrc="https://www.burjkhalifa.ae/wp-content/uploads/2024/08/BK-Website-video-AUG-2025-1.mp4"
+                                loop muted playsinline
+                                poster="https://www.burjkhalifa.ae/wp-content/uploads/2024/08/BURJ-KHALIFE-Hero-image-1-min-1.jpg">
+                                <source type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="BK_img_wrapper">
+                            <figure class="img"><img
+                                    src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/burjkhalifa_img.svg"
+                                    alt="Image"></figure>
+                        </div>
+                    </div>
+                    <div class="showcase-main-wrapper">
+                        <div class="showcase_item">
+                            <div class="showcase"
+                                style="background-image: url(https://www.burjkhalifa.ae/wp-content/uploads/2024/08/fine-dining.jpg);">
+                                <div class="description">
+                                    <div class="showcase-overlay"></div>
+                                    <div class="hover-main-description">
+                                        <div class="inner-wrapper">
+                                            <h3 class="hover-title">
+                                                FINE DINING </h3>
+                                            <div class="description-content">
+                                                <p class="hover-description">Indulge in a range of culinary delights
+                                                    where every dish served is an unforgettable experience.</p>
+                                                <a href="https://www.burjkhalifa.ae/experiences/fine-dining/"
+                                                    class="floating-btn-wrapper">
+                                                    <div class="float-circle">
+                                                        <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-white.svg"
+                                                            alt="float-icon" width="10" height="18">
+                                                    </div>
+                                                    <span class="float-text">
+                                                        Explore More </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase_item">
+                            <div class="showcase"
+                                style="background-image: url(https://www.burjkhalifa.ae/wp-content/uploads/2024/08/armani-fountain-suite-living-room-1-e1722837671619.jpg);">
+                                <div class="description">
+                                    <div class="showcase-overlay"></div>
+                                    <div class="hover-main-description">
+                                        <div class="inner-wrapper">
+                                            <h3 class="hover-title">
+                                                LUXURY STAYS </h3>
+                                            <div class="description-content">
+                                                <p class="hover-description">Enjoy beautifully-designed rooms and
+                                                    premium facilities at Armani Hotel Dubai.</p>
+                                                <a href="https://www.burjkhalifa.ae/experiences/luxury-stays/"
+                                                    class="floating-btn-wrapper">
+                                                    <div class="float-circle">
+                                                        <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-white.svg"
+                                                            alt="float-icon" width="10" height="18">
+                                                    </div>
+                                                    <span class="float-text">
+                                                        Explore More </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase_item">
+                            <div class="showcase"
+                                style="background-image: url(https://www.burjkhalifa.ae/wp-content/uploads/2024/08/observation_desks.jpg);">
+                                <div class="description">
+                                    <div class="showcase-overlay"></div>
+                                    <div class="hover-main-description">
+                                        <div class="inner-wrapper">
+                                            <h3 class="hover-title">
+                                                Observation Decks </h3>
+                                            <div class="description-content">
+                                                <p class="hover-description">Discover breathtaking views of the city
+                                                    from Burj Khalifa’s world-famous viewing platforms. </p>
+                                                <a href="https://www.burjkhalifa.ae/experiences/observation-decks/"
+                                                    class="floating-btn-wrapper">
+                                                    <div class="float-circle">
+                                                        <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-white.svg"
+                                                            alt="float-icon" width="10" height="18">
+                                                    </div>
+                                                    <span class="float-text">
+                                                        Explore More </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase_item">
+                            <div class="showcase"
+                                style="background-image: url(https://www.burjkhalifa.ae/wp-content/uploads/2024/08/dsc07896.jpg);">
+                                <div class="description">
+                                    <div class="showcase-overlay"></div>
+                                    <div class="hover-main-description">
+                                        <div class="inner-wrapper">
+                                            <h3 class="hover-title">
+                                                WELLNESS </h3>
+                                            <div class="description-content">
+                                                <p class="hover-description">Experience ultimate relaxation and
+                                                    rejuvenation at Burj Khalifa's world-class wellness facilities.</p>
+                                                <a href="https://www.burjkhalifa.ae/experiences/wellness/"
+                                                    class="floating-btn-wrapper">
+                                                    <div class="float-circle">
+                                                        <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-white.svg"
+                                                            alt="float-icon" width="10" height="18">
+                                                    </div>
+                                                    <span class="float-text">
+                                                        Explore More </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Top banner section End  -->
+
+
+            <!--Exclusive section Start  -->
+            <!--Exclusive section End  -->
+
+            <!--Discover section Start  -->
+            <div data-wpr-lazyrender="1" class="discover-more-main-wrapper">
+                <div class="container-fluid">
+                    <div class="discover_sticky_wrp">
+                        <div class="trigger-wpsec">
+                            <div id="trigger2" class="spacer"></div>
+                        </div>
+                        <div class="ins_discover_sticky_wrp">
+                            <div class="inner_fxl_bx">
+                                <div class="discover-left-col">
+                                    <h4 class="discover-title">Experiences Nearby</h4>
+                                    <div class="owl-carousel owl-theme mobile_slider" id="sync1">
+                                        <div class="fade_text_wrp fdtxt_1">
+                                            <h3 class="discover-subtitle">Experience serenity</h3>
+                                            <h5 class="discover-place">Dubai Fountain</h5>
+                                            <div class="discover-description">
+                                                <p>Near Burj Khalifa, explore a world of beauty and wonder at Dubai
+                                                    Fountain. Witness the world’s tallest dancing fountain, marvel at
+                                                    the 30-acre Burj Lake and bask in the splendour of this serene
+                                                    landmark.</p><br />
+                                            </div>
+                                            <a href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-fountain"
+                                                class="floating-btn-wrapper">
+                                                <div class="float-circle">
+                                                    <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-dark.svg"
+                                                        alt="float-icon" width="10" height="18">
+                                                </div>
+                                                <span class="float-text">
+                                                    Explore Dubai Fountain </span>
+                                            </a>
+                                        </div>
+                                        <div class="fade_text_wrp fdtxt_2">
+                                            <h3 class="discover-subtitle">Explore cultural wonders</h3>
+                                            <h5 class="discover-place">Dubai Opera</h5>
+                                            <div class="discover-description">
+                                                <p>Dive in the captivating world of arts and culture at Dubai Opera.
+                                                    Enjoy a world-class performance, be amazed by the magnificent
+                                                    architecture, and discover a rich history with a behind-the-scenes
+                                                    tour.</p><br />
+                                            </div>
+                                            <a href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-opera"
+                                                class="floating-btn-wrapper">
+                                                <div class="float-circle">
+                                                    <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-dark.svg"
+                                                        alt="float-icon" width="10" height="18">
+                                                </div>
+                                                <span class="float-text">
+                                                    Explore Dubai Opera </span>
+                                            </a>
+                                        </div>
+                                        <div class="fade_text_wrp fdtxt_3">
+                                            <h3 class="discover-subtitle">Soar to new heights</h3>
+                                            <h5 class="discover-place">Sky Views</h5>
+                                            <div class="discover-description">
+                                                <p>Experience Dubai from breath-taking heights at Sky Views, where
+                                                    luxurious space, exhilarating thrills and stunning views create a
+                                                    unique sense of adventure.</p><br />
+                                            </div>
+                                            <a href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#sky-views"
+                                                class="floating-btn-wrapper">
+                                                <div class="float-circle">
+                                                    <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-dark.svg"
+                                                        alt="float-icon" width="10" height="18">
+                                                </div>
+                                                <span class="float-text">
+                                                    Explore Sky Views </span>
+                                            </a>
+                                        </div>
+                                        <div class="fade_text_wrp fdtxt_4">
+                                            <h3 class="discover-subtitle">Explore a world of endless choices</h3>
+                                            <h5 class="discover-place">Dubai Mall</h5>
+                                            <div class="discover-description">
+                                                <p>Discover Dubai Mall, the ultimate retail and lifestyle destination
+                                                    where extraordinary experiences await. From exclusive shopping to
+                                                    delectable dining, Dubai Mall has everything you desire and more.
+                                                </p><br />
+                                            </div>
+                                            <a href="https://www.burjkhalifa.ae/experiences/experiences-nearby/#dubai-mall"
+                                                class="floating-btn-wrapper">
+                                                <div class="float-circle">
+                                                    <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-dark.svg"
+                                                        alt="float-icon" width="10" height="18">
+                                                </div>
+                                                <span class="float-text">
+                                                    Explore Dubai Mall </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image-scroll-col owl-carousel owl-theme mobile_slider" id="sync2">
+                                    <figure class="image-wrapper">
+                                        <img class="ukiyo"
+                                            src="https://www.burjkhalifa.ae/wp-content/uploads/2024/08/Dubai-Fountain.jpg"
+                                            alt="Dubai Fountain illuminated at night with the Burj Khalifa in the background.">
+                                    </figure>
+                                    <figure class="image-wrapper">
+                                        <img class="ukiyo"
+                                            src="https://www.burjkhalifa.ae/wp-content/uploads/2024/08/Dubai-opera.jpg"
+                                            alt="Dubai Opera building with a view of the skyline.">
+                                    </figure>
+                                    <figure class="image-wrapper">
+                                        <img class="ukiyo"
+                                            src="https://www.burjkhalifa.ae/wp-content/uploads/2024/08/SKYVIEW.jpg"
+                                            alt="Panoramic view from the Burj Khalifa's observation deck.">
+                                    </figure>
+                                    <figure class="image-wrapper">
+                                        <img class="ukiyo"
+                                            src="https://www.burjkhalifa.ae/wp-content/uploads/2024/08/dubai-mall.jpg"
+                                            alt="View of The Dubai Mall with the Burj Khalifa in the background.">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Discover section End  -->
+
+
+
+        </div>
+
+        <!----------Landing Page Footer------------>
+        <footer data-wpr-lazyrender="1" class="footer">
+            <div class="footer-container">
+                <div class="row justify-content-center">
+
+                    <div class="col-xl-12 col-md-12 col-12">
+                        <div class="footer-top">
+                            <h4 class="foot_ani2">Follow Us</h4>
+                            <ul
+                                class="d-flex align-items-center justify-content-center gap-10 my-2 foot_ani3 social_navi">
+                                <li><a href="https://www.facebook.com/BurjKhalifaByEmaar/" target='_blank'><img
+                                            src="https://www.burjkhalifa.ae/wp-content/uploads/2023/09/facebook-1.svg"
+                                            alt="" width="38" height="38" /></a></li>
+                                <li><a href="https://www.instagram.com/burjkhalifa/?hl=en" target='_blank'><img
+                                            src="https://www.burjkhalifa.ae/wp-content/uploads/2023/09/instagram-1.svg"
+                                            alt="" width="38" height="38" /></a></li>
+                                <li><a href="https://www.youtube.com/@burjkhalifa" target='_blank'><img
+                                            src="https://www.burjkhalifa.ae/wp-content/uploads/2023/09/youtube-1.svg"
+                                            alt="" width="38" height="38" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-content foot_ani4">
+                    <div class="footer-menu">
+                        <ul id="menu-secondary-menu" class="menu-row">
+                            <li class='menu-col'>
+                                <h4 class='menu-title'>EMAAR ENTERTAINMENT</h4>
+                                <ul>
+                                    <li id="321"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-321"><a
+                                            target="_blank" rel="noopener" href="https://www.dubaiopera.com/">Dubai
+                                            Opera</a></li>
+                                    <li id="322"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-322"><a
+                                            target="_blank" rel="noopener" href="https://www.reelcinemas.ae/en/">Reel
+                                            Cinemas</a></li>
+                                    <li id="333"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-333"><a
+                                            target="_blank" rel="noopener" href="https://www.dubaiicerink.com/">Dubai
+                                            Ice Rink</a></li>
+                                    <li id="334"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-334"><a
+                                            target="_blank" rel="noopener"
+                                            href="https://entertainment.emaar.com/attraction/play-dxb">Play DXB</a></li>
+                                    <li id="335"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-335"><a
+                                            href="https://dubai.kidzania.com/en-ae">KidZania</a></li>
+                                    <li id="336"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-336"><a
+                                            target="_blank" rel="noopener"
+                                            href="https://www.thedubaiaquarium.com/">Dubai Aquarium & Underwater Zoo</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='menu-col'>
+                                <h4 class='menu-title'>EMAAR'S OTHER BUSINESSES</h4>
+                                <ul>
+                                    <li id="338"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338"><a
+                                            target="_blank" rel="noopener"
+                                            href="https://properties.emaar.com/">Properties</a></li>
+                                    <li id="339"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-339"><a
+                                            target="_blank" rel="noopener"
+                                            href="https://www.emaarhospitality.com/en/">Hospitality</a></li>
+                                    <li id="340"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-340"><a
+                                            target="_blank" rel="noopener" href="https://www.emaarmalls.ae/">Malls</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='menu-col'>
+                                <h4 class='menu-title'>LINKS</h4>
+                                <ul>
+                                    <li id="751"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751">
+                                        <a href="https://www.burjkhalifa.ae/privacy-policy/">Privacy Policy</a>
+                                    </li>
+                                    <li id="752"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-752">
+                                        <a href="https://www.burjkhalifa.ae/terms-and-conditions/">Terms and
+                                            Conditions</a>
+                                    </li>
+                                    <li id="765"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-765">
+                                        <a href="https://www.burjkhalifa.ae/cookies-policy/">Cookies Policy</a>
+                                    </li>
+                                    <li id="4064"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4064">
+                                        <a href="https://www.burjkhalifa.ae/emaar-asset-usage-policy/">Emaar Asset Usage
+                                            Policy</a>
+                                    </li>
+                                    <li id="2778"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2778">
+                                        <a href="https://www.burjkhalifa.ae/site-map/">Site Map</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='menu-col'>
+                                <h4 class='menu-title'>OTHER</h4>
+                                <ul>
+                                    <li id="351"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-351"><a
+                                            target="_blank" rel="noopener"
+                                            href="https://thedubaimall.com/en/plan-your-visit/parking">Parking at Dubai
+                                            Mall</a></li>
+                                    <li id="352"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-352"><a
+                                            target="_blank" rel="noopener" href="https://thedubaimall.com/">Dubai
+                                            Mall</a></li>
+                                    <li id="353"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-353"><a
+                                            target="_blank" rel="noopener"
+                                            href="https://thedubaimall.com/en/entertain-detail/the-dubai-fountain-1">Dubai
+                                            Fountain</a></li>
+                                    <li id="354"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-354"><a
+                                            target="_blank" rel="noopener"
+                                            href="https://www.emaargiftcard.com/emaargc/welcome">Emaar Gift Card</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="news-letter">
+                        <h4 class="menu-title">
+                            Have a question? </h4>
+                        <p class="fs-14 text-color-primary">Connect with us at Burj Khalifa Dubai. We’re here to help
+                            address any comments or concerns you may have. </p>
+                        <a href="https://www.burjkhalifa.ae/contact-us/" class="floating-btn-wrapper">
+                            <div class="float-circle">
+                                <img src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/images/rightarrow-dark.svg"
+                                    alt="float-icon" width="10" height="18">
+                            </div>
+                            <span class="float-text">Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-copyright-wrap">
+                    <p>
+                        Tribute to all the visionaries, artisans,<br />
+                        and dreamers who brought Burj Khalifa to life. </p>
+                </div>
+
+                <div class="copyright-cover">
+                    ALL RIGHTS RESERVED </div>
+            </div>
+        </footer>
+    </main>
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/salient-child\/*","\/wp-content\/themes\/salient\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <div class="cookie-notice d-none">
+        <div class="cookie_text">
+            <div class="cookie-para">
+                <p>This website uses cookies. We use cookies to make sure you get the best experience on our website.
+                    Please read our <a title="Privacy Policy"
+                        href="https://www.burjkhalifa.ae/privacy-policy/">privacy</a> and <a title="Cookies Policy"
+                        href="https://www.burjkhalifa.ae/cookies-policy/">cookie</a> policy.</p>
+            </div>
+        </div>
+        <button type="button" class="accept-cookies">Accept</button>
+    </div>
+    <script type="rocketlazyloadscript">
+                if (!CLI_Cookie.exists("cookies_accept")){
+                    jQuery(".cookie-notice").removeClass("d-none");
+                }
+                jQuery(document).on("click", ".accept-cookies", function(){ 
+                    if (!CLI_Cookie.exists("cookies_accept")){
+                        CLI_Cookie.set("cookies_accept", "yes", 30);
+                        jQuery(".cookie-notice").slideUp("normal", function() { jQuery(".cookie-notice").remove() } );
+                    }
+                });
+            </script>
+    <script type="text/javascript" id="rocket-browser-checker-js-after">
+        /* <![CDATA[ */
+        "use strict"; var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor) } } return function (Constructor, protoProps, staticProps) { return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor } }(); function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function") } var RocketBrowserCompatibilityChecker = function () { function RocketBrowserCompatibilityChecker(options) { _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options } return _createClass(RocketBrowserCompatibilityChecker, [{ key: "_checkPassiveOption", value: function (self) { try { var options = { get passive() { return !(self.passiveSupported = !0) } }; window.addEventListener("test", null, options), window.removeEventListener("test", null, options) } catch (err) { self.passiveSupported = !1 } } }, { key: "initRequestIdleCallback", value: function () { !1 in window && (window.requestIdleCallback = function (cb) { var start = Date.now(); return setTimeout(function () { cb({ didTimeout: !1, timeRemaining: function () { return Math.max(0, 50 - (Date.now() - start)) } }) }, 1) }), !1 in window && (window.cancelIdleCallback = function (id) { return clearTimeout(id) }) } }, { key: "isDataSaverModeOn", value: function () { return "connection" in navigator && !0 === navigator.connection.saveData } }, { key: "supportsLinkPrefetch", value: function () { var elem = document.createElement("link"); return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype } }, { key: "isSlowConnection", value: function () { return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType) } }]), RocketBrowserCompatibilityChecker }();
+        /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket-preload-links-js-extra">
+        /* <![CDATA[ */
+        var RocketPreloadLinksConfig = { "excludeUris": "\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm", "siteUrl": "https:\/\/www.burjkhalifa.ae", "onHoverDelay": "100", "rateThrottle": "3" };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket-preload-links-js-after">
+        /* <![CDATA[ */
+        (function () {
+            "use strict"; var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) { return typeof e } : function (e) { return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e }, e = function () { function i(e, t) { for (var n = 0; n < t.length; n++) { var i = t[n]; i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i) } } return function (e, t, n) { return t && i(e.prototype, t), n && i(e, n), e } }(); function i(e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") } var t = function () { function n(e, t) { i(this, n), this.browser = e, this.config = t, this.options = this.browser.options, this.prefetched = new Set, this.eventTime = null, this.threshold = 1111, this.numOnHover = 0 } return e(n, [{ key: "init", value: function () { !this.browser.supportsLinkPrefetch() || this.browser.isDataSaverModeOn() || this.browser.isSlowConnection() || (this.regex = { excludeUris: RegExp(this.config.excludeUris, "i"), images: RegExp(".(" + this.config.imageExt + ")$", "i"), fileExt: RegExp(".(" + this.config.fileExt + ")$", "i") }, this._initListeners(this)) } }, { key: "_initListeners", value: function (e) { -1 < this.config.onHoverDelay && document.addEventListener("mouseover", e.listener.bind(e), e.listenerOptions), document.addEventListener("mousedown", e.listener.bind(e), e.listenerOptions), document.addEventListener("touchstart", e.listener.bind(e), e.listenerOptions) } }, { key: "listener", value: function (e) { var t = e.target.closest("a"), n = this._prepareUrl(t); if (null !== n) switch (e.type) { case "mousedown": case "touchstart": this._addPrefetchLink(n); break; case "mouseover": this._earlyPrefetch(t, n, "mouseout") } } }, { key: "_earlyPrefetch", value: function (t, e, n) { var i = this, r = setTimeout(function () { if (r = null, 0 === i.numOnHover) setTimeout(function () { return i.numOnHover = 0 }, 1e3); else if (i.numOnHover > i.config.rateThrottle) return; i.numOnHover++, i._addPrefetchLink(e) }, this.config.onHoverDelay); t.addEventListener(n, function e() { t.removeEventListener(n, e, { passive: !0 }), null !== r && (clearTimeout(r), r = null) }, { passive: !0 }) } }, { key: "_addPrefetchLink", value: function (i) { return this.prefetched.add(i.href), new Promise(function (e, t) { var n = document.createElement("link"); n.rel = "prefetch", n.href = i.href, n.onload = e, n.onerror = t, document.head.appendChild(n) }).catch(function () { }) } }, { key: "_prepareUrl", value: function (e) { if (null === e || "object" !== (void 0 === e ? "undefined" : r(e)) || !1 in e || -1 === ["http:", "https:"].indexOf(e.protocol)) return null; var t = e.href.substring(0, this.config.siteUrl.length), n = this._getPathname(e.href, t), i = { original: e.href, protocol: e.protocol, origin: t, pathname: n, href: t + n }; return this._isLinkOk(i) ? i : null } }, { key: "_getPathname", value: function (e, t) { var n = t ? e.substring(this.config.siteUrl.length) : e; return n.startsWith("/") || (n = "/" + n), this._shouldAddTrailingSlash(n) ? n + "/" : n } }, { key: "_shouldAddTrailingSlash", value: function (e) { return this.config.usesTrailingSlash && !e.endsWith("/") && !this.regex.fileExt.test(e) } }, { key: "_isLinkOk", value: function (e) { return null !== e && "object" === (void 0 === e ? "undefined" : r(e)) && (!this.prefetched.has(e.href) && e.origin === this.config.siteUrl && -1 === e.href.indexOf("?") && -1 === e.href.indexOf("#") && !this.regex.excludeUris.test(e.href) && !this.regex.images.test(e.href)) } }], [{ key: "run", value: function () { "undefined" != typeof RocketPreloadLinksConfig && new n(new RocketBrowserCompatibilityChecker({ capture: !0, passive: !0 }), RocketPreloadLinksConfig).init() } }]), n }(); t.run();
+        }());
+    </script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/jquery.min.js?ver=1757072098"
+        id="Theme-jQuery-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/bootstrap.min.js?ver=1757072098"
+        id="bootstrap-min-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/aos.js?ver=1757072098"
+        id="aos-js-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/ScrollMagic.min.js?ver=1757072098"
+        id="ScrollMagic-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/gsap.min.js?ver=1757072098"
+        id="gsap-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/animation.gsap.min.js?ver=1757072098"
+        id="animation-gsap-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/owl.carousel.min.js?ver=1757072098"
+        id="owlCarouselJs-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/smooth-parallax.min.js?ver=1757072098"
+        id="parallax-js"></script>
+    <script type="text/javascript" id="ajax-admin-url-js-extra">
+        /* <![CDATA[ */
+        var Aurl = { "ajaxurl": "https:\/\/www.burjkhalifa.ae\/wp-admin\/admin-ajax.php", "theme_nonce": "051cb74f64", "api_nonce": "155b71a7e7", "theme_url": "https:\/\/www.burjkhalifa.ae\/wp-content\/themes\/salient-child", "site_url": "https:\/\/www.burjkhalifa.ae" };
+        /* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/localize-script.js?ver=6.8.2"
+        id="ajax-admin-url-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/events-blocker.js?ver=1757072098"
+        id="eventsBlocker-js"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/homepage.js?ver=1757072098"
+        id="homepage-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript"
+        src="https://www.burjkhalifa.ae/wp-content/themes/salient-child/assets/js/custom.js?ver=1757072098"
+        id="custom-js"></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-556SRRCS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+</body>
+
+</html>
