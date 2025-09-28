@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habiba Nadeem – Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+    <div class="pic">
+      <img src="https://avatars.githubusercontent.com/u/191740318?v=4" alt="Habiba Nadeem" />
+    </div>
+
+    <h1 >Habiba Nadeem</h1>
+    <p  >
+      📍 Karachi, Pakistan | 📞 03202688270 | 📧
+      <a href="mailto:habibanadeem075@gmail.com">habibanadeem075@gmail.com</a>
+    </p>
+    <p >
+      🌐 <a href="https://habibanadeemhere.github.io/Myy-Portfolio/" target="_blank">Portfolio</a> |
+      🐙 <a href="https://github.com/habibanadeemhere" target="_blank">GitHub</a> |
+      💼 <a href="https://linkedin.com/in/habiba-nadeem-4b63412b9" target="_blank">LinkedIn</a>
+    </p>
+
+    <div class="section" >
+      <h2>👩‍💻 Profile Summary</h2>
+      <p id="summary">
+        Motivated Frontend Developer with hands-on experience in creating responsive, animated, and user-focused websites.
+        <span id="dots">...</span>
+        <span id="more" style="display: none;">
+          Skilled in HTML, CSS, JavaScript, and frameworks like Bootstrap. Currently learning modern web and app development.
+          Looking for real-world opportunities to apply and expand my skills.
+        </span>
+      </p>
+      <button onclick="toggleReadMore()" id="readMoreBtn" >Read More</button>
+    </div>
+
+    <div class="section" >
+      <h2>💻 Projects</h2>
+      <ul>
+        <li >
+          <strong>Password Generator</strong> –
+          <a href="https://habibanadeemhere.github.io/Password-Generator/" target="_blank">Live Demo</a><br />
+          A creative, eye-catching password generator using JavaScript and AOS animations.
+        </li>
+        <li>
+          <strong>Portfolio Website</strong> –
+          <a href="https://habibanadeemhere.github.io/Myy-Portfolio/" target="_blank">View</a><br />
+          Responsive and interactive portfolio to showcase all my projects and skills.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🛠️ Skills</h2>
+      <div class="skills" id="skillList" >
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+        <span>Figma</span>
+        <span>AOS Animations</span>
+        <span>Responsive Design</span>
+      </div>
+      <br />
+      <button onclick="filterSkills()">Filter Skills</button>
+    </div>
+
+    <div class="section" >
+      <h2>🎓 Education</h2>
+      <p>
+        <strong>St. Patrick’s Girls High School</strong> – Karachi<br />
+        Completed High School<br />
+        📘 Studied: Introduction to Programming (Completed), Modern Web & App Development (In Progress)
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>📢 Hire Me!</h2>
+      <p>
+        I am not looking for an internship — I am ready to work! I bring creativity, consistency, and the hunger to learn and grow.
+        Hire me as a junior frontend developer and let me prove it.
+      </p>
+      <button onclick="contactMe()">Contact Me Now</button>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> Habiba Nadeem – Built with 💙 and JavaScript 
+    </footer><br>
+  </div>
+
+<br><br>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>

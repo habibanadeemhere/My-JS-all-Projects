@@ -1,0 +1,60 @@
+body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+
+    h1, #clock {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #FF6F61;
+      text-shadow: 0 0 8px #FF6F61;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    h1:hover {
+      color: #FF998A;
+      text-shadow: 0 0 15px #FF998A;
+    }
+
+    #clock {
+      font-size: 6rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: #FFFFFF; 
+      text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 15px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease;
+      cursor: default;
+      user-select: text;
+    }
+
+ 

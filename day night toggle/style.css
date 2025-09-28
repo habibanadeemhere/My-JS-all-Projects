@@ -1,0 +1,35 @@
+body {
+  transition: background-color 0.5s, color 0.5s;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0;
+}
+
+.container {
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 15px;
+  transition: background-color 0.5s, box-shadow 0.5s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#icon {
+  font-size: 80px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+#icon:hover {
+  transform: scale(1.1);
+}
+
+.day {
+  background-color: #87ceeb; /* Sky blue */
+  color: #000;
+}
+
+.night {
+  background-color: #1e1e2f; /* Dark purple/blue */
+  color: #fff;
+}
