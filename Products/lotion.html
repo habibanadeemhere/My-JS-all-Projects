@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lotion Products</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff5f0, #ffe7db);
+            margin: 0;
+            padding: 30px 15px;
+            color: #4a2c2a;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+            color: #d9480f;
+            text-shadow: 1px 1px 2px #ffa07a;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 12px 20px rgba(217, 116, 64, 0.15);
+            overflow: hidden;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 22px 35px rgba(217, 116, 64, 0.3);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+            border-bottom: 3px solid #f28c44;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .info {
+            padding: 18px 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info h5 {
+            margin-bottom: 12px;
+            font-size: 19px;
+            color: #d9480f;
+            font-weight: 600;
+            min-height: 48px;
+        }
+
+        .info p {
+            font-size: 14.5px;
+            color: #7a4a38;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff784e, #ff5722);
+            border: none;
+            padding: 12px 28px;
+            font-weight: 700;
+            color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 8px 22px rgba(255, 87, 34, 0.6);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            align-self: center;
+            user-select: none;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #ff5722, #ff784e);
+            box-shadow: 0 12px 35px rgba(255, 87, 34, 0.8);
+            transform: translateY(-4px);
+        }
+
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <br><br>
+    <h1 data-aos="fade-down" data-aos-duration="1000">Lotion Products</h1><br>
+    <input id="inp1" class="pro" type="search"
+        placeholder="Search products: facewash, sunscreen, lotion, foundation, face powder, lipgloss, lipstick"
+        onkeydown="if(event.key === 'Enter'){ onenter() }"><br>
+    <a href="index.html" class="btn-primary">Go Back To Home Page</a>
+    <br>
+
+    <div class="product-grid">
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="800">
+            <img src="https://beautyfly.pk/wp-content/uploads/2022/08/Nivea-Body-lotion-Shea-Daily-Moisture-48hr-Shea-butter-for-dry-skin-16.9-fl.-oz-1-400x533.jpg"
+                alt="Nivea Nourishing Body Lotion" />
+            <div class="info">
+                <h5>Nivea Nourishing Body Lotion</h5>
+                <p>Deeply nourishes and softens dry skin with almond oil and vitamin E.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+            <img src="https://skinstash.pk/cdn/shop/files/AveenoSkinReliefMoisturisingLotion_500ml.png?v=1754071312&width=533"
+                alt="Cetaphil Moisturizing Lotion" />
+            <div class="info">
+                <h5>Cetaphil Moisturizing Lotion</h5>
+                <p>Lightweight, fragrance-free lotion that restores hydration and soothes skin.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71etIFqlwCL._AC_UL375_SR375,375_.jpg"
+                alt="Aveeno Daily Moisturizing Lotion" />
+            <div class="info">
+                <h5>Aveeno Daily Moisturizing Lotion</h5>
+                <p>Clinically proven to improve dry skin in 1 day, protects and soothes skin.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
+            <img src="https://www.mamaorganic.pk/cdn/shop/products/BabyLotion100ml.jpg?v=1679116809"
+                alt="Vaseline Intensive Care Lotion" />
+            <div class="info">
+                <h5>Vaseline Intensive Care Lotion</h5>
+                <p>Rapidly absorbs and deeply moisturizes to heal dry, cracked skin.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+            <img src="https://crystolite.com.pk/cdn/shop/files/Uriderm.webp?v=1722266864"
+                alt="The Body Shop Almond Milk Lotion" />
+            <div class="info">
+                <h5>The Body Shop Almond Milk Lotion</h5>
+                <p>Lightweight lotion enriched with almond milk to hydrate and smooth skin.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="500">
+            <img src="https://carecosmetics.com.pk/cdn/shop/files/61.jpg?v=1706953281"
+                alt="Biotique Bio Morning Nectar Lotion" />
+            <div class="info">
+                <h5>Biotique Bio Morning Nectar Lotion</h5>
+                <p>Natural Ayurvedic formula to nourish and soften the skin.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+            <img src="https://glowbeauty.pk/cdn/shop/files/gluvit-s-lotions-moisturizers-gluvit-s-face-body-whitening-lotion-43069723836673.png?v=1729083410&width=2048"
+                alt="Himalaya Nourishing Body Lotion" />
+            <div class="info">
+                <h5>Himalaya Nourishing Body Lotion</h5>
+                <p>Non-greasy, fast-absorbing lotion with aloe vera and winter cherry.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="700">
+            <img src="https://carecosmetics.com.pk/cdn/shop/files/13.jpg?v=1706953318"
+                alt="Kama Ayurveda Lavender Body Lotion" />
+            <div class="info">
+                <h5>Kama Ayurveda Lavender Body Lotion</h5>
+                <p>Calming and soothing lotion with lavender and natural oils.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

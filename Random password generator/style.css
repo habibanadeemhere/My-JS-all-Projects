@@ -1,0 +1,177 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  animation: gradientShift 20s infinite alternate;
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+.container:hover {
+  transform: scale(1.01);
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #00f0ff, #39ff14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #00ffc8;
+}
+
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.controls label:hover {
+  color: #00ffc8;
+}
+
+
+input[type="number"] {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #00ffc8;
+  background: rgba(255, 255, 255, 0.1);
+  color: #00ffc8;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  border-color: #39ff14;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px #00ffc8;
+}
+
+
+button {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #00f0ff, #39ff14);
+  color: #000;
+  transition: all 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px #00ffc8;
+}
+
+button:hover {
+  background: linear-gradient(to right, #39ff14, #00f0ff);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #39ff14;
+}
+
+
+.output-area {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1.3rem;
+  min-height: 40px;
+  word-break: break-word;
+  color: #39ff14;
+  border: 2px dashed #00ffc8;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.output-area:hover {
+  border-color: #39ff14;
+  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.copy-btn {
+  margin-top: 15px;
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  color: white;
+  box-shadow: 0 0 10px #ff00cc;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(to right, #3333ff, #ff00cc);
+  box-shadow: 0 0 15px #ff00cc;
+}
+
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .controls {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  input[type="number"] {
+    font-size: 0.9rem;
+  }
+
+  .output-area {
+    font-size: 1.1rem;
+  }
+}

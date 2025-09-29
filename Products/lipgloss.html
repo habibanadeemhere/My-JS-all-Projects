@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lipgloss</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fceabb, #f8b500);
+            margin: 0;
+            padding: 40px 20px;
+            color: #4a2c2c;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            letter-spacing: 1.4px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .product-card {
+            background: #fff0e6;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(240, 180, 20, 0.3);
+            width: 280px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(240, 180, 20, 0.55);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-bottom: 5px solid #f8b500;
+            transition: transform 0.35s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .info {
+            padding: 22px 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info h5 {
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #7a3e3e;
+            min-height: 56px;
+        }
+
+        .info p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            color: #6b4a4a;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #f8b500, #e57f00);
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            padding: 14px 38px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(229, 127, 0, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            transition: all 0.3s ease;
+            align-self: center;
+            cursor: pointer;
+            user-select: none;
+            font-size: 1.05rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #e57f00, #f8b500);
+            box-shadow: 0 12px 30px rgba(248, 181, 0, 0.8);
+            transform: translateY(-4px);
+        }
+
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(229, 127, 0, 0.6);
+        }
+
+        @media (max-width: 1024px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .product-card {
+                width: 100%;
+            }
+
+            body {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 data-aos="fade-down" data-aos-duration="1100">Lipgloss Products</h1>
+    <input id="inp1" class="pro" type="search"
+        placeholder="Search products: facewash, sunscreen, lotion, foundation, face powder, lipgloss, lipstick"
+        onkeydown="if(event.key === 'Enter'){ onenter() }"><br>
+    <a href="index.html" class="btn-primary">Go Back To Home Page</a>
+    <br><br>
+
+
+
+    <div class="product-grid">
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+            <img src="https://cozmetica.pk/cdn/shop/products/1480147_1.jpg?v=1744031477&width=533"
+                alt="NYX Butter Gloss" />
+            <div class="info">
+                <h5>NYX Butter Gloss</h5>
+                <p>Ultra creamy lipgloss with a non-sticky finish and rich pigmentation.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+            <img src="https://springs.com.pk/cdn/shop/products/6902395723073.png?v=1747861507"
+                alt="Maybelline Lifter Gloss" />
+            <div class="info">
+                <h5>Maybelline Lifter Gloss</h5>
+                <p>Hydrating gloss infused with hyaluronic acid for plump lips.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img src="https://wwd.com/wp-content/uploads/2024/09/best-drugstore-lip-gloss-elf-lip-oil.jpg?w=1000"
+                alt="Fenty Beauty Gloss Bomb" />
+            <div class="info">
+                <h5>Fenty Beauty Gloss Bomb</h5>
+                <p>Universal rose nude lip gloss with intense shine and moisturizing effect.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
+            <img src="https://m.media-amazon.com/images/I/61KMb6HGVVL._UF894,1000_QL80_.jpg"
+                alt="Revlon Super Lustrous Lipgloss" />
+            <div class="info">
+                <h5>Revlon Super Lustrous</h5>
+                <p>Richly pigmented, shiny finish lip gloss with comfortable wear.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+            <img src="https://www.elfcosmetics.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-elf-master/default/dwfc68fdd9/2025/GlowReviverMeltingLipBalm/82487_OpenA_V8_R.jpg?sfrm=png&sw=700&q=90&strip=false"
+                alt="Burt’s Bees Lip Shine" />
+            <div class="info">
+                <h5>Burt’s Bees Lip Shine</h5>
+                <p>Natural formula with nourishing ingredients and light shine.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 900,
+            easing: 'ease-in-out'
+        });
+    </script>
+
+
+
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

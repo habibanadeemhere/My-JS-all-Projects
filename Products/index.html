@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+<h1 class="text-center">Multi-Page Product Listing</h1><br>
+    <input id="inp1" class="pro" type="search"
+        placeholder="Search products: facewash, sunscreen, lotion, foundation, face powder, lipgloss, lipstick"
+        onkeydown="if(event.key === 'Enter'){ onenter() }">
+
+    <h2 class="products-title">Available Products</h2>
+
+
+    <div class="product-list">
+        <div class="product-card" data-name="facewash">Facewash</div>
+        <div class="product-card" data-name="sunscreen">Sunscreen</div>
+        <div class="product-card" data-name="lotion">Lotion</div>
+        <div class="product-card" data-name="foundation">Foundation</div>
+        <div class="product-card" data-name="lipstick">Lipstick</div>
+        <div class="product-card" data-name="serum">Face Powder</div>
+        <div class="product-card" data-name="serum">Lipgloss</div>
+    </div>
+
+    <div class="robot-section">
+        <img src="https://media.giphy.com/media/7x3PHPSMXSONHFuOK4/giphy.gif" alt="Cute Robot">
+        <p>Your friendly robot assistant is here 🤖</p>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Facewash Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            animation: fadeInUp 1.5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card .info {
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .product-card .info h5 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .product-card .info p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .product-card .btn {
+            margin: 0 15px 15px 15px;
+            padding: 8px 0;
+            font-weight: 600;
+            border-radius: 25px;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br>
+    <h1>Our Facewash Products</h1>
+    <br>
+    <input id="inp1" class="pro" type="search"
+        placeholder="Search products: facewash, sunscreen, lotion, foundation, face powder, lipgloss, lipstick"
+        onkeydown="if(event.key === 'Enter'){ onenter() }"><br>
+    <a href="index.html" class="btn-primary">Go Back To Home Page</a>
+    <br><br>
+    <div class="product-grid">
+
+
+        <div class="product-card">
+            <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/him/him50047/y/29.jpg"
+                alt="Clean & Clear Facewash" />
+            <div class="info">
+                <h5>Clean & Clear Foaming Facewash</h5>
+                <p>Oil-free formula to prevent pimples and refresh your skin.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img
+                src="https://pinksoul.pk/image/cache/catalog/Revamped%20products/Rice%20Facewash%20New%20Web%20Poster%201-1080x1080.jpg" />
+            <div class="info">
+                <h5>Himalaya Purifying Neem Facewash</h5>
+                <p>Removes impurities and clears pimples with natural neem extracts.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://shineware.online/cdn/shop/files/whit_facewash.jpg?v=1719489745"
+                alt="Mamaearth Facewash" />
+            <div class="info">
+                <h5>Mamaearth Vitamin C Facewash</h5>
+                <p>Brightens skin with Vitamin C and gentle natural cleansers.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://sandalonline.pk/cdn/shop/files/Bundals_02_d4bf95aa-62f2-4b91-8926-b853840ff93f.jpg?v=1738241107&width=2048"
+                alt="Nivea Facewash" />
+            <div class="info">
+                <h5>Nivea Milk Delights Facewash</h5>
+                <p>Enriched with saffron for normal skin. Gently cleans and nourishes.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://shaheenchemistrwp.com/cdn/shop/files/simple-kind-to-skin-refreshing-facial-wash-150ml-pakistan.png?v=1754996798"
+                alt="Neutrogena Deep Clean Facewash" />
+            <div class="info">
+                <h5>Neutrogena Deep Clean Facewash</h5>
+                <p>Effectively removes dirt and oil leaving skin clean and fresh.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://enlivenskincare.pk/cdn/shop/products/Untitled-2_Recovered_-04_c45853d6-169f-4fa0-9e8b-cdb972467b20.png?v=1718878805"
+                alt="L'Oreal Paris Facewash" />
+            <div class="info">
+                <h5>L'Oreal Paris Hydra Fresh Facewash</h5>
+                <p>Hydrates skin while cleansing, leaving it fresh and smooth.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71BCSAKZF4L._UF1000,1000_QL80_.jpg" alt="Biotique Facewash" />
+            <div class="info">
+                <h5>Biotique Bio Fruit Facewash</h5>
+                <p>Contains natural fruit extracts for a gentle and fresh cleanse.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://lh4.googleusercontent.com/proxy/DDPrsPwBBNqLijzVjHctk-YzjrjD4ADShoE3oFaNx_QrPHafzUbYkPGwLQ0ro_KeDaUOBFl2gCnsdaZ-z4pJFlPiO-WPbQgIdVkKkpTOUPtHzX0"
+                alt="Ponds Facewash" />
+            <div class="info">
+                <h5>Ponds Pure White Facewash</h5>
+                <p>Brightens skin with natural ingredients, cleans pores effectively.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://www.olim.pk/cdn/shop/files/Clear-skin.png?v=1732165091" alt="VLCC Facewash" />
+            <div class="info">
+                <h5>VLCC Tea Tree Facewash</h5>
+                <p>Tea tree oil formula controls acne and purifies skin deeply.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://alkhaleejsupermarket.pk/cdn/shop/files/12955.png?v=1721312457" alt="Garnier Facewash" />
+            <div class="info">
+                <h5>Garnier Men Oil Clear Facewash</h5>
+                <p>Specially formulated to remove excess oil and dirt for men.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://azeemcentre.com/cdn/shop/files/images-139_01930b06-6a57-4744-9818-4893ae4c462b.jpg?v=1738073419"
+                alt="The Body Shop Facewash" />
+            <div class="info">
+                <h5>The Body Shop Aloe Facewash</h5>
+                <p>Soothes skin with natural aloe vera and cleans impurities.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://laz-img-sg.alicdn.com/p/78f11867e8fe5e0992e7512cfa309bbb.jpg"
+                alt="Forest Essentials Facewash" />
+            <div class="info">
+                <h5>Forest Essentials Delicate Facewash</h5>
+                <p>Luxury Ayurvedic cleansing for soft, glowing skin.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

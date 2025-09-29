@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sunscreen Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff9e6, #ffe4b5);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card .info {
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .product-card .info h5 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .product-card .info p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .product-card .btn {
+            margin: 0 15px 15px 15px;
+            padding: 8px 0;
+            font-weight: 600;
+            border-radius: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: 90%;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            border: none;
+            padding: 12px 25px;
+            font-weight: 700;
+            color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 6px 15px rgba(255, 126, 95, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #feb47b, #ff7e5f);
+            box-shadow: 0 8px 25px rgba(254, 180, 123, 0.7);
+            transform: translateY(-3px);
+        }
+
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(254, 180, 123, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <br><br>
+    <h1 data-aos="fade-down" data-aos-duration="1000">Top Sunscreen Products</h1><br>
+    <input id="inp1" class="pro" type="search"
+        placeholder="Search products: facewash, sunscreen, lotion, foundation, face powder, lipgloss, lipstick"
+        onkeydown="if(event.key === 'Enter'){ onenter() }"><br>
+    <a href="index.html" class="btn-primary">Go Back To Home Page</a>
+    <br>
+    <div class="product-grid">
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="800">
+            <img src="https://goldenpearl.com.pk/cdn/shop/files/SB-90-001.jpg?v=1757392507"
+                alt="Neutrogena Ultra Sheer Sunscreen" />
+            <div class="info">
+                <h5>Neutrogena Ultra Sheer SPF 50+</h5>
+                <p>Lightweight, non-greasy formula with broad spectrum UVA/UVB protection.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+            <img src="https://thejade.pk/cdn/shop/products/jade-mineral-sunscreen-helio-pro-spf50-395632.jpg?v=1738668144"
+                alt="La Roche-Posay Anthelios" />
+            <div class="info">
+                <h5>La Roche-Posay Anthelios SPF 60</h5>
+                <p>Very high UVA/UVB protection with antioxidant complex.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <img src="https://accufixcosmetics.com/cdn/shop/files/1_43e793e8-5696-4445-a9d7-0e51e85e32e9.jpg?v=1743160885"
+                alt="Biore UV Aqua Rich" />
+            <div class="info">
+                <h5>Biore UV Aqua Rich SPF 50+</h5>
+                <p>Water-based, quick-absorbing sunscreen with moisturizing hyaluronic acid.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
+            <img src="https://skinstash.pk/cdn/shop/files/neutrogenaspf70.png?v=1699451767&width=1946"
+                alt="Vaseline Healthy White SPF 24" />
+            <div class="info">
+                <h5>Vaseline Healthy White SPF 24</h5>
+                <p>Instant fairness & hydration with broad spectrum protection.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+            <img src="https://theneeds.pk/cdn/shop/files/Sunscreen_Cream_SPF.jpg?v=1754908380"
+                alt="Lotus Herbals Safe Sun" />
+            <div class="info">
+                <h5>Lotus Herbals Safe Sun SPF 50</h5>
+                <p>Natural ingredients with UVA & UVB protection, water-resistant formula.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="500">
+            <img src="https://cudrovaspazio.com/cdn/shop/files/Best_sunscreen_in_Pakistan.png?crop=center&height=2252&v=1739162350&width=2083"
+                alt="The Face Shop Natural Sun" />
+            <div class="info">
+                <h5>The Face Shop Natural Sun SPF 50</h5>
+                <p>Lightweight, moisturizing sunscreen with a natural finish.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzhxMOR-hyojFsO5RlFdADKFq5GQGB6jiZtQ&s"
+                alt="Lotus Herbals Aloe Sunscreen" />
+            <div class="info">
+                <h5>Lotus Herbals Aloe Sunscreen SPF 30</h5>
+                <p>Calming aloe vera with broad spectrum sun protection.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="700">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPjoo2hdI-H-XAOWbyPjBLvj8QHiriFfvRHQ&s"
+                alt="Neutrogena Hydro Boost SPF 30" />
+            <div class="info">
+                <h5>Neutrogena Hydro Boost SPF 30</h5>
+                <p>Hydrating sunscreen gel-cream with hyaluronic acid.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="800">
+            <img src="https://bigbrand.pk/image/cache/data/z97885/Ponds%20White%20Beauty%20SPF50%20Sunscreen%20Gluta-Boost%20170ml%20in%20pakistan-500x554.jpg"
+                alt="Aveeno Positively Radiant SPF 30" />
+            <div class="info">
+                <h5>Aveeno Positively Radiant SPF 30</h5>
+                <p>Broad spectrum sunscreen with natural soy complex to brighten skin.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="900">
+            <img src="https://sugaredandbronzed.com/cdn/shop/files/SB_TintedMineralSunscreen_web-shopimg_clean_277ade65-5708-4f33-82e8-8a1baa1c7f56.png?v=1729886324"
+                alt="Kaya Daily Use Sunscreen" />
+            <div class="info">
+                <h5>Kaya Daily Use Sunscreen SPF 35</h5>
+                <p>Non-oily, lightweight formula with broad spectrum protection.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="1000">
+            <img src="https://conaturalintl.com/cdn/shop/files/20.jpg?v=1729664556"
+                alt="Biotique Bio Aloe Vera Sunscreen" />
+            <div class="info">
+                <h5>Biotique Bio Aloe Vera Sunscreen SPF 50+</h5>
+                <p>Natural ingredients with soothing aloe vera and high protection.</p>
+                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

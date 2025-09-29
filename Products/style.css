@@ -1,0 +1,167 @@
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Poppins', sans-serif;
+     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+     color: #333;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+     padding-top: 80px;
+ }
+
+
+ #inp1 {
+     width: 90%;
+     max-width: 600px;
+     padding: 15px 20px;
+     border: none;
+     border-radius: 50px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     font-size: 16px;
+     transition: all 0.3s ease;
+ }
+
+ #inp1:focus {
+     outline: none;
+     transform: scale(1.03);
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+ }
+
+
+ .products-title {
+     margin-top: 60px;
+     font-size: 2rem;
+     font-weight: 700;
+     animation: fadeInUp 1s ease-in-out;
+ }
+
+
+ .product-list {
+     margin-top: 30px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+     padding: 0 20px;
+     animation: fadeIn 2s ease;
+ }
+
+ .product-card {
+     background: white;
+     padding: 20px;
+     border-radius: 15px;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+     width: 200px;
+     text-align: center;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .product-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+ }
+
+
+ @keyframes fadeIn {
+     0% {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes fadeInUp {
+     0% {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+
+
+
+
+ @media (max-width: 768px) {
+     .product-card {
+         width: 100%;
+         max-width: 300px;
+     }
+
+     .products-title {
+         text-align: center;
+     }
+
+ }
+
+
+
+ .robot-section {
+     text-align: center;
+     margin-top: 60px;
+     margin-bottom: 40px;
+     animation: fadeInUp 1.5s ease-in-out;
+ }
+
+ .robot-section img {
+     width: 250px;
+     max-width: 80%;
+     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+     transition: transform 0.4s ease;
+     border-radius: 50%;
+ }
+
+ .robot-section img:hover {
+     transform: scale(1.1) rotate(5deg);
+ }
+
+ .robot-section p {
+     font-size: 1rem;
+     color: #555;
+     font-weight: 500;
+     margin-top: 10px;
+     animation: fadeIn 2s ease-in;
+ }
+
+ @media (max-width: 768px) {
+     .robot-section img {
+         width: 100px;
+     }
+
+     .robot-section p {
+         font-size: 0.9rem;
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }

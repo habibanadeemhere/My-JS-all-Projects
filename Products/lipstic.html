@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lipstick</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            background: linear-gradient(to right, #ffe0ec, #ffccd9);
+            margin: 0;
+            padding: 40px 20px;
+            color: #4c1f2c;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2.7rem;
+            margin-bottom: 50px;
+            letter-spacing: 1.2px;
+            color: #b2004c;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .product-card {
+            background: #fff0f4;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(200, 30, 80, 0.2);
+            width: 280px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 35px rgba(200, 30, 80, 0.35);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-bottom: 4px solid #ff5b99;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .info {
+            padding: 22px 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info h5 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #a01248;
+            min-height: 52px;
+        }
+
+        .info p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            color: #5b2c3b;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #ff4473, #d1004c);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 40px;
+            box-shadow: 0 5px 15px rgba(255, 68, 115, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            align-self: center;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #d1004c, #ff4473);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 68, 115, 0.6);
+        }
+
+        @media (max-width: 1024px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .product-card {
+                width: 100%;
+            }
+
+            body {
+                padding: 30px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body><br><br>
+
+    <h1 data-aos="fade-down" data-aos-duration="1100">Lipstick Products</h1><br>
+    <input id="inp1" class="pro" type="search"
+        placeholder="Search products: facewash, sunscreen, lotion, foundation, face powder, lipgloss, lipstick"
+        onkeydown="if(event.key === 'Enter'){ onenter() }">
+    <br>
+    <a href="index.html" class="btn-primary">Go Back To Home Page</a>
+    <br>
+    <div class="product-grid">
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="800">
+            <img src="https://flyingcart.pk/cdn/shop/files/image_1_9342e6d4-5d2b-4db0-8bdc-f1a4673e8589_533x.jpg?v=1734780591"
+                alt="Maybelline Color Sensational" />
+            <div class="info">
+                <h5>Maybelline Color Sensational</h5>
+                <p>Bold color, creamy texture, perfect for all-day wear.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="850" data-aos-delay="100">
+            <img src="https://luxebykan.com/cdn/shop/files/sunday.jpg?v=1756191675&width=1445"
+                alt="Lakmé 9 to 5 Primer Matte" />
+            <div class="info">
+                <h5>Lakmé 9 to 5 Primer + Matte</h5>
+                <p>Primer + matte finish in one, lightweight & long-lasting.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+            <img src="https://media.naheed.pk/catalog/product/cache/57044254b6ba66615c533891fd7cf70f/1/1/1171984-1.jpg"
+                alt="L'Oreal Rouge Signature" />
+            <div class="info">
+                <h5>L'Oreal Rouge Signature</h5>
+                <p>Liquid matte lip ink, intense color, feather-light texture.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="fade-up" data-aos-duration="950" data-aos-delay="300">
+            <img src="https://www.makeupcityshop.com/cdn/shop/products/maybelline---color-sensational-liquid-matte-lipstick---06-best-babe.jpg?v=1651132907"
+                alt="MAC Retro Matte" />
+            <div class="info">
+                <h5>MAC Retro Matte Lipstick</h5>
+                <p>Classic matte finish, vibrant pigment, iconic texture.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+            <img src="https://i5.walmartimages.com/seo/DIOR-Rouge-Dior-Colored-Lip-Balm_6dc084b0-c28c-46ae-8329-b2cd6bf693f0.b00ff7d6e75ea09cabd9cb6532ebfd08.jpeg"
+                alt="Sugar Smudge Me Not" />
+            <div class="info">
+                <h5>Sugar Smudge Me Not</h5>
+                <p>One-swipe application, transfer-proof, stunning shades.</p>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 900,
+            easing: 'ease-in-out'
+        });
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
